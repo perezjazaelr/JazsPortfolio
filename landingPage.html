@@ -10,6 +10,11 @@
 </head>
 <body>
     <div class="main-container">
+
+        <div id="pre-loader">
+            <img src="pre.gif" alt="">
+        </div>
+
         <div class="navbar">
             <div id="dayModeToggle"  class="navbar-child1">
                 <h5>JAZ'S</h5>
@@ -99,6 +104,16 @@
             const dayModeToggle = document.getElementById("dayModeToggle");
             dayModeToggle.addEventListener("click", () => {
                 document.body.classList.toggle("day-mode");
+            });
+        </script>
+
+        <script>
+            var loader = document.getElementById("pre-loader");
+
+            window.addEventListener("load", function () {
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 5000);
             });
         </script>
         
