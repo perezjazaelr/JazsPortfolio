@@ -58,7 +58,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 1000;
+    z-index: 1;
     top: 0;
 }
 
@@ -240,6 +240,34 @@ body {
         font-size: 23px;
     }
   }
+
+
+
+  /* PRE LOADER */
+#pre-loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+#pre-loader img:first-child{
+    height: 64px;
+    width: 64px;
+    z-index: 100;
+    display: block;
+}
+
+
+
+
+
+
   @media screen and (max-width: 400px){
 
     .bg-home{
