@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaz's Website</title>
+    <link rel="Website icon" type="png" href="/PICTURES/JAZ LOGO.png">
+    <link rel="stylesheet" href="/CSS/main.css">
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <div id="dayModeToggle"  class="navbar-child1">
+                <h5>JAZ'S</h5>
+            </div>
+            <div class="navbar-child2">
+                <ul>
+                    <li><a href="#box1">HOME</a></li>
+                    <li><a href="#box2">ABOUT</a></li>
+                    <li><a href="#box3">SKILL</a></li>
+                    <li><a href="#box4">PROJECTS</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content-box1 box" id="box1">
+                <div class="bg-home">
+                    <div class="home-child1">
+                        <img src="/PICTURES/jaz.jpg" alt="">
+                    </div>
+                    <div class="home-child2">
+
+                        <h1 class="home-text">HELLO, I'M <span class="auto-type"></span></h1>
+                        
+                        <p class="home-text">I am a 21-year-old, 3rd-year student pursuing a Bachelor of Science in Information Technology at Rizal Technological University. Residing in Mandaluyong City, I am passionate about technology and programming, with skills in frameworks.</p>
+                        <h2 class="hire-me">Hire me</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box2 box" id="box2">
+                <div class="bg-about">
+                    
+                </div>
+            </div>
+            <div class="content-box3 box" id="box3">
+                <div class="bg-skill">
+                    
+                </div>
+            </div>
+            <div class="content-box4 box" id="box4">
+                
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+
+        var typed = new Typed(".auto-type", {
+            strings : ["JAZ!", "IT STUDENT ","FRONT-END DEVELOPER"],
+            typeSpeed : 150,
+            backSpeed : 150,
+            loop : true
+        })
+
+
+        
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+          const boxes = document.querySelectorAll('.box');
+        
+          const checkBoxes = () => {
+            const triggerBottom = window.innerHeight * 2; // Trigger animation when the box hits 80% of the viewport
+        
+            boxes.forEach(box => {
+              const boxTop = box.getBoundingClientRect().top;
+        
+              if(boxTop < triggerBottom) {
+                box.classList.add('show');
+              } else {
+                box.classList.remove('show');
+              }
+            });
+          };
+        
+          window.addEventListener('scroll', checkBoxes);
+          checkBoxes(); // Run initially in case some boxes should be animated without scrolling
+        });
+        </script>
+        
+        <script>
+            const dayModeToggle = document.getElementById("dayModeToggle");
+            dayModeToggle.addEventListener("click", () => {
+                document.body.classList.toggle("day-mode");
+            });
+        </script>
+        
+</body>
+</html>

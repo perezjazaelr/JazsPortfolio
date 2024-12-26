@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaz's Website</title>
+    <link rel="icon" type="image/png" href="/PICTURES/JAZ LOGO.png">
+    <style>
+        :root {
+            --gradient-default-background: linear-gradient(77deg, rgba(58,86,100,1) 1%, rgba(13,39,74,1) 100%);
+            --default-font-font-family: sans-serif;
+            --color-1-background: #46738b;
+            --color-2-background: #0d274a;
+            --day-bg-color: #f9f9f9;
+            --day-text-color: #333;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--default-font-font-family);
+            background-color: var(--gradient-default-background);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Left Navigation Bar */
+        .navbar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .navbar.active {
+            transform: translateX(0);
+        }
+
+        .navbar h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 10px 0;
+            padding: 10px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-links li:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        /* Main Content */
+        .main-container {
+            margin-left: 0;
+            transition: margin-left 0.3s ease;
+            padding-left: 20px;
+        }
+
+        .main-container.shifted {
+            margin-left: 250px;
+        }
+
+        .content-container {
+            margin-top: 80px;
+        }
+
+        /* Adjustments for Mobile */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                width: 200px;
+            }
+
+            .main-container.shifted {
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar" id="navbar">
+        <h1>Jaz's Website</h1>
+        <ul class="nav-links">
+            <li><a href="#box1">Home</a></li>
+            <li><a href="#box2">About</a></li>
+            <li><a href="#box3">Skill</a></li>
+            <li><a href="#box4">Projects</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container" id="main-content">
+        <div class="content-container">
+            <section id="box1">
+                <h1>Home</h1>
+                <p>Welcome to Jaz's Website!</p>
+            </section>
+            <section id="box2">
+                <h1>About</h1>
+                <p>I am a 21-year-old IT student...</p>
+            </section>
+            <section id="box3">
+                <h1>Skills</h1>
+                <p>Here are my skills...</p>
+            </section>
+            <section id="box4">
+                <h1>Projects</h1>
+                <p>Check out my projects...</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navbar = document.getElementById("navbar");
+        const mainContent = document.getElementById("main-content");
+
+        hamburger.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+            mainContent.classList.toggle("shifted");
+        });
+    </script>
+</body>
+</html>
