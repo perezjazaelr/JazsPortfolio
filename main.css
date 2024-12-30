@@ -165,7 +165,13 @@ body {
     gap: 1rem;
     padding: 0 30px;
 }
-.hire-me{
+.btn-div{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: .5rem;
+}
+.btn-div h2:first-child{
     height: 50px;
     width: 130px;
     border-radius: 20px;
@@ -179,7 +185,22 @@ body {
     font-size: 15px;
     font-weight: 500
 }
-.hire-me:hover{
+.btn-div h2:last-child{
+    height: 50px;
+    width: 130px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: #0d274a00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+    font-family: var(--default-font-font-family);
+    font-size: 15px;
+    font-weight: 500
+}
+.btn-div h2:hover{
     background-color: #a4854b;
     cursor: pointer;
     border: 1px solid white;
@@ -393,10 +414,39 @@ body {
         border: none;
     }
     .home-child2 h1 {
-        font-size: 30px;
-        height: 75px;
+        font-size: 25px;
+        height: 85px;
     }
     .home-child2 p{
-        font-size: 17px;
+        font-size: 16px;
+    }
+    .btn-div h2:first-child{
+        height: 45px;
+        width: 95px;
+        border-radius: 20px;
+        background-color: #0d274a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 20px;
+        font-family: var(--default-font-font-family);
+        font-size: 14px;
+        font-weight: 500
+    }
+    .btn-div h2:last-child{
+        height: 45px;
+        width: 95px;
+        border-radius: 20px;
+        border: 1px solid white;
+        background-color: #0d274a00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 20px;
+        font-family: var(--default-font-font-family);
+        font-size: 14px;
+        font-weight: 500
     }
   }
